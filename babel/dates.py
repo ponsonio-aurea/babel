@@ -1450,7 +1450,7 @@ class DateTimeFormat(object):
                 return get_timezone_gmt(self.value, width='iso8601', locale=self.locale)
 
     def format(self, value, length):
-        return ('%%0%dd' % length) % value
+        return '%0*d' % (length, value)
 
     def get_day_of_year(self, date=None):
         if date is None:
