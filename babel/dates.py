@@ -1184,7 +1184,7 @@ def parse_time(string, locale=LC_TIME):
     #        and seconds should be optional, maybe minutes too
     #        oh, and time-zones, of course
 
-    numbers = re.findall('(\d+)', string)
+    numbers = re.findall('(d+)', string)
     hour = int(numbers[indexes['H']])
     minute = int(numbers[indexes['M']])
     second = int(numbers[indexes['S']])
